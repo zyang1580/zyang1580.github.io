@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<!--<span style="font-size:14px;"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></span>-->
+<!-- saved from url=(0031)http://home.ustc.edu.cn/~zy2015/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title>Yang Zhang's Homepage</title>
+<meta name="description" content="Yang Zhang, 张洋, PhD student in University of Science and Technology. Recommender systems, information retrieval, applied machine learning.">
+<meta name="keywords" content="Yang Zhang, 张洋, USTC, information retrieval, machine learning, recommender systems, causal inference">
+
+<link rel="stylesheet" type="text/css" href="./Homepage_files/zy.css">
+<!-- <script type="text/javascript" async="" src="./files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39532305-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> -->
+
+<style>@-moz-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-webkit-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}embed,object{animation-duration:.001s;-ms-animation-duration:.001s;-moz-animation-duration:.001s;-webkit-animation-duration:.001s;-o-animation-duration:.001s;animation-name:nodeInserted;-ms-animation-name:nodeInserted;-moz-animation-name:nodeInserted;-webkit-animation-name:nodeInserted;-o-animation-name:nodeInserted;}
+</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+@keyframes caretBlink {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+@keyframes rotateSpinner {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#text-tool-caret {
+    animation-name: caretBlink;  
+    animation-iteration-count: infinite;  
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 1s; 
+}
+
+#en-markup-loading-spinner {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+}
+
+#en-markup-loading-spinner img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    animation-name: rotateSpinner;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+.skitchToastBoxContainer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    pointer-events: none;
+}
+
+.skitchToastBox {
+    width: 200px;
+    height: 16px;
+    padding: 12px;
+    background-color: rgba(47, 55, 61, 0.95);
+    border-radius: 4px;
+    color: white;
+    cursor: default;
+    font-size: 10pt;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.32);
+    font-family: 'Soleil', Helvetica, Arial, sans-serif;
+    border: 2px rgba(255, 255, 255, 0.38) solid;
+}
+
+.lang-zh-cn .skitchToastBox {
+    font-family: '微软雅黑', 'Microsoft YaHei', SimSun,
+        '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic', 'Soleil',
+        Helvetica, Arial, sans-serif;
+}
+
+.lang-ja-jp .skitchToastBox {
+    font-family: '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic',
+        '微软雅黑', 'Microsoft YaHei', SimSun, 'Soleil', Helvetica, Arial,
+        sans-serif;
+}
+
+.skitchToast {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    height: 10px;
+    color: #f1f5f8;
+    text-align: center;
+}
+
+.skitchVisible {
+    /* Don't remove this class it's a hack used by the Evernote Clipper */
+}
+</style><style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
+
+
+</style><style type="text/css">/* Copyright 2019-present Evernote Corporation. All rights reserved. */
+
+#en-markup-disabled {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: default;
+    -webkit-user-select: none;
+}
+
+#en-markup-alert-container {
+    position: absolute;
+    z-index: 9999;
+    width: 450px;
+    left: calc(50% - 225px);
+    top: calc(50% - 85px);
+    background-color: white;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.35);
+    -webkit-user-select: none;
+}
+
+
+#en-markup-alert-container .cell-2 {
+    position: relative;
+    float: left;
+    width: 345px;
+    margin-top: 29px;
+    margin-bottom: 20px;
+}
+
+#en-markup-alert-container .cell-2 .cell-2-title {
+    margin-bottom: 5px;
+    padding-right: 30px;
+    font-size: 12pt;
+    font-family: Tahoma, Arial;
+}
+
+#en-markup-alert-container .cell-2 .cell-2-message {
+    padding-right: 30px;
+    font-size: 9.5pt;
+    font-family: Tahoma, Arial;
+}
+
+#en-markup-alert-container .cell-3 {
+    position: relative;
+    width: 450px;
+    height: 60px;
+    float: left;
+    background-color: rgb(240,240,240);
+}
+
+#en-markup-alert-container .cell-3 button {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 110px;
+    height: 36px;
+}
+
+#en-markup-alert-container .cell-3 button.alt-button {
+    position: absolute;
+    top: 12px;
+    right: 140px;
+    width: 110px;
+    height: 36px;
+}
+</style></head>
+
+
+<body>  
+<div id="content">
+
+<div id="news">
+<h2>News</h2><br>
+<font size="3px">
+
+  <b> 17 May 2024</b><br>
+  <span class="easylink">
+  One paper is accepted by <a href="https://kdd2024.kdd.org/" ,="" target="_blank"> KDD 2024 </a> on recommendation multi-task learning.
+  </span><br><br>
+
+  <b> 16 May 2024</b><br>
+  <span class="easylink">
+  Two papers are accepted by <a href="https://2024.aclweb.org/" ,="" target="_blank"> ACL 2024 </a> on LLM-based Recommendation and evaluation for LLM.
+  </span><br><br>
+
+  <b> 26 Mar 2024</b><br>
+  <span class="easylink">
+  Two papers are accepted by <a href="https://sigir-2024.github.io/" ,="" target="_blank"> SIGIR 2024 </a> on recommendation fariness and LLM-based Recommendation.
+  </span><br><br>
+
+  <b> 3 Mar 2024</b><br>
+  <span class="easylink">
+  One papers is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69" ,="" target="_blank"> TKDE </a> on  causal recommendation.
+  </span><br><br>
+
+  <b> 23 Jan 2024</b><br>
+  <span class="easylink">
+  One paper is accepted by <a href="https://www2024.thewebconf.org/" ,="" target="_blank"> WWW 2024 </a> on top-K recommendation metric/loss.
+  </span><br><br>
+
+
+  <b> 20 Oct 2023</b><br>
+  <span class="easylink">
+  One paper is accepted by <a href="https://www.wsdm-conference.org/2024/" ,="" target="_blank"> WSDM 2024 </a> about label learning for short-video recommendation.
+  </span><br><br>
+
+  <b> 21 Sep 2023</b><br>
+  <span class="easylink">
+  I received <a href="https://recsys.acm.org/recsys23/" ,="" target="_blank"> RecSys 2023  <b><font color="black">Outstanding Reviewer Award.</font></b> </a>
+  </span><br><br>  
+
+<b> 6 Aug 2023</b><br>
+  <span class="easylink">
+  One paper is accepted by <a href="https://uobevents.eventsair.com/cikm2023//" ,="" target="_blank"> CIKM 2023 </a> about label debiasing for recommendation.
+  </span><br><br>
+
+
+<b> 27 July 2023</b><br>
+  <span class="easylink">
+  One co-authored paper is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6687317" ,="" target="_blank"> IEEE TBD</a> about Uncertainty-aware Recommendation.
+  </span><br><br>
+
+
+<b> 28 June 2023</b><br>
+  <span class="easylink">
+  Two co-authored short papers are accepted by <a href="https://recsys.acm.org/recsys23/" ,="" target="_blank"> RecSys 2023</a> about LLM for Recommendation.
+  </span><br><br>
+
+
+<b> 5 April 2023</b><br>
+  <span class="easylink">
+  One full paper, one short paper and one DC paper have been accepted by <a href="https://sigir.org/sigir2023/" ,="" target="_blank">SIGIR 2023</a> on invariant learning and abductive reasoning for recommendation.
+  </span><br><br>
+
+<b> 26 Feb 2023</b><br>
+  <span class="easylink">
+  One paper is accepted by <a href="https://sigir.org/sigir2023/" ,="" target="_blank">ICDE 2023</a> on invariant learning for loan default prediction.
+  </span><br><br>
+
+
+<b>30 July 2022</b><br>
+  <span class="easylink">
+  One paper is accepted by <a href="https://dl.acm.org/journal/tois" ,="" target="_blank">ACM TOIS</a> on causal recommendation.
+  </span><br><br>
+
+<b>14 July 2021</b><br>
+<span class="easylink">
+Our SIGIR'21 paper "Causal Intervention for Leveraging Popularity Bias in Recommendation" receives <b><font color="red">Best Paper Honorable Mention</font></b>. 
+</span><br><br>
+
+<b>16 April 2021</b><br>
+<span class="easylink">
+One first-author full paper is accepted by <a href="http://sigir.org/sigir2021/" ,="" target="_blank">SIGIR</a>, on causal inference for popularity bias in recsys. Thanks for my advisor and other co-authors!
+</span><br><br>
+
+<b>23 April 2020</b><br>
+<span class="easylink">
+One first-author full paper is accepted by <a href="http://sigir.org/sigir2020/" ,="" target="_blank">SIGIR</a>, on meta-learning for recsys. Thanks for all co-authors!
+</span><br><br>
+
+</div>
+
+<div id="left">
+<table style="background-color:white;">
+<tbody><tr nosave="">
+<td valign="CENTER">
+<!-- <img src="./Homepage_files/yangzhang_profile_2018.JPG" height="250" align="left"> -->
+<img src="./Homepage_files/zhangyang_2023.jpg" height="200" align="left">
+</td>
+
+<td valign="CENTER" width="2%">
+</td>
+
+<td valign="CENTER" halign="LEFT">
+<font size="+0">
+<b><font size="+2">Yang Zhang&nbsp;</font></b>
+<!--<p style="margin-left:0px;">-->
+<!--<img src="./Yang Zhang&#39;s Homepage_files/name.png" ,="" height="60">-->
+<!--</p><p style="margin-left:0px;">-->
+<!-- <b>PhD</b> -->
+</p><p style="margin-left:0px;">
+<!-- <a href="https://sist.ustc.edu.cn/" ,="" target="_blank">School of Information Science and Technology</a><br>
+<a href="https://www.ustc.edu.cn/" ,="" target="_blank">University of Science and Technology of China</a><br> -->
+<!-- <a href="https://sist.ustc.edu.cn/" ,="" target="_blank">School of Computing</a><br>
+<a href="https://www.ustc.edu.cn/" ,="" target="_blank">National University of Singapore</a><br> -->
+</p><a style="margin-left:0px;">
+<!-- Email:  zy2015 at mail.ustc.edu.cn<br> -->
+Email:  zyang1580@gmail.com<br>
+  &bull; <a href="https://github.com/zyang1580">GitHub</a> &bull; <a href="https://scholar.google.com/citations?user=M9NcazMAAAAJ&hl=zh-CN&oi=sra"> Google Scholar</a> <br>
+</p></font><p><font size="+0">
+</font>
+</p></td>
+</tr>
+</tbody></table>
+
+<div class="box">
+
+I am an incoming postdoctoral research fellow at the School of Computing, National University of Singapore. I obtained my PhD from the University of Science and Technology of China in March 2023, supervised by Prof. Xiangnan He. Prior to that, I received my B.Eng. degree from USTC in 2019. My recent research focuses on recommendation systems and LLM/Agent personalization. I have authored over ten publications featured in renowned conferences and journals such as SIGIR, CIKM, and TOIS. Notably, my research on causal debiasing earned the distinction of Best Paper Honorable Mention at SIGIR 2021. Additionally, I have served as a Program Committee (PC) member and reviewer for esteemed conferences and journals, including TOIS, TKDE, TIST, TKDD, TNNLS, WSDM, SIGIR, RecSys, SIGKDD, and AAAI. <br><br>
+
+<!-- I am currently in the final year of my PhD program at <a href="http://data-science.ustc.edu.cn/" ,="" target="_blank">Lab for Data Science, USTC</a>, with a research focus on Recommender Systems. More specifically, my research centers on enhancing the reliability and trustworthiness of recommender systems, addressing critical challenges such as debiasing, temporal out-of-distribution (OOD) generalization, fairness, and privacy, primarily through a causal perspective. Currently, I am also actively involved in research that harnesses Large Language Models (LLMs) to empower recommender systems. I have authored over ten publications that have been featured in renowned conferences and journals like SIGIR, CIKM, and TOIS. Notably, my research on causal debiasing earned the distinction of Best Paper Honorable Mention at SIGIR 2021. Moreover, I have served as as the Program Committee (PC) member and reviewer for esteemed conferences and journals, including TOIS, TKDE, TIST, TKDD, TNNLS, WSDM, SIGIR, RecSys, SIGKDD, AAAI, etc. <br><br> -->
+
+<!-- I am currently in the final year of my PhD program at the  <a href="http://data-science.ustc.edu.cn/" ,="" target="_blank">Lab for Data Science, USTC</a>, with a research focus on Recommender Systems. Specifically, my work centers around enhancing the trustworthiness of recommender systems, tackling issues such as <b>debiasing, temporal out-of-distribution (OOD) generalization</b>, fairness, and privacy, primarily from a <b>causal perspective</b>. Additionally, I am currently engaged in research related to leveraging Large Language Models (LLMs) to empower recommender systems. I have authored over ten publications that have been featured in renowned conferences and journals like SIGIR, CIKM, and TOIS. Notably, my research on causal debiasing earned the distinction of Best Paper Honorable Mention at SIGIR 2021. Beyond my research, I actively contribute to the academic community by serving as a Program Committee (PC) member and reviewer for esteemed conferences and journals, including TOIS, TKDE, TIST, TKDD, TNNLS, WSDM, SIGIR, RecSys, SIGKDD, SIGIR-AP, AAAI, and ECML-PKDD. <br><br>>-->
+
+<!-- I am a 4-th year (硕博连读第四年) PhD student at the <a href="http://data-science.ustc.edu.cn/" ,="" target="_blank">USTC Lab for Data Science</a>, supervised by <a href="https://hexiangnan.github.io/" ,="" target="_blank">Prof. Xiangnan He</a>  and <a href="https://fulifeng.github.io/" ,="" target="_blank">Prof. Fuli Feng</a>. I received my B.E. degree from the USTC. Now, my research interest lies in the recommender system and causal inference. I have several publications that appeared in the top conferences/journals such as SIGIR and TOIS. My work on causal recommendation has received the Best Paper Honorable Mention in SIGIR 2021. Moreover, I have served as the PC member and reviewer for the top conferences and journals including TOIS, TKDE, TIST, AAAI, WSDM, SIGIR, and SIGKDD.  <br><br>>-->
+
+<!-- I am a 4-th year (硕博连读第四年) PhD student at the <a href="http://data-science.ustc.edu.cn/" ,="" target="_blank">USTC Lab for Data Science</a>, supervised by Prof. Xiangnan He. I received my bachelor's degree at USTC. Now, my research interest lies in the recommender system and causal inference. Especially, I want to explore the recommender system with high stabilization ability and good generalization ability. I have 2 publications that appeared in the top conference SIGIR. My work on causal recommendation has received the Best Paper Honorable Mention in SIGIR 2021. Moreover, I have served as the (external) reviewers for KDD, TOIS, ECML-PKDD, etc.  <br><br>>-->
+
+
+
+
+
+<h2 style="CLEAR: both;">Education</h2>
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title">University of Sicence and Technology of China (USTC)</span> <br>
+  PhD student in  Information and Communication Engineering&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sep 2019 - Mar 2024, Hefei, China <br>
+  Advisor: <a href="https://hexiangnan.github.io/" target="_blank">Prof. Xiangnan He</a> Mentor: <a href="https://fulifeng.github.io/" target="_blank">Prof. Fuli Feng</a>
+     </td></tr></tbody></table>
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title">University of Sicence and Technology of China (USTC)</span> <br>
+  Bachelor in Electroic Information Engineering &nbsp;&nbsp;&nbsp;  Sep 2015 - June 2019, Hefei, China <br>
+<!--  Advisor: Prof. Cong Shen</a>-->
+     </td></tr></tbody></table>
+
+
+<h2 style="CLEAR: both">Experiences</h2>
+
+
+<table>
+  <tbody><tr>
+    <td> <span class="title">Research Intern</span>, Wechat, Tencent (Shen Zhen), July 2020 - July 2021   <br>
+      Mentor: Dr. Chonggang song  (Wechat, Tencent)
+    </td></tr></tbody>
+</table>
+
+
+<div id="papers">
+
+
+<h2>Tutorials & Workshop</h2>
+
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title">Large Language Models for Recommendation: Progresses and Future Directions</span>
+      <br> Keqin Bao, Jizhi Zhang, <b>Yang Zhang</b>, Wenjie Wang, Fuli Feng, Xiangnan He
+    <br> SIGIR-AP 2023 & WWW 2024 &nbsp;&nbsp; <a href="https://generative-rec.github.io/tutorial/" target="_blank">web page&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title">The 1st Workshop on Recommendation with Generative Models</span>
+      <br> Wenjie Wang, Yong Liu, <b>Yang Zhang</b>, Weiwen Liu, Fuli Feng, Xiangnan He, Aixin Sun  
+    <br> CIKM 2023 & WWW 2024 &nbsp;&nbsp; <a href="https://generative-rec.github.io/workshop/" target="_blank">web page&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title">Causal Recommendation: Progresses and Future Directions</span>
+      <br>   Wenjie Wang, <b>Yang Zhang</b>, Haoxuan Li, Peng Wu, Fuli Feng, Xiangnan He
+    <br> SIGIR 2023 &nbsp;&nbsp; <a href="https://causalrec.github.io/" target="_blank">web page&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title">Causal Recommendation: Progresses and Future Directions</span>
+      <br>  <b>Yang Zhang</b>, Wenjie Wang, Peng Wu, Fuli Feng, Xiangnan He
+    <br> WWW 2022 &nbsp;&nbsp; <a href="https://causalrec.github.io/" target="_blank">web page&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+
+
+<h2>Preprints</h2>
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title"> CoLLM: Integrating Collaborative Embeddings into Large Language Models for Recommendation</span>
+      <br><b>Yang Zhang</b>, Fuli Feng, Jizhi Zhang, Keqin Bao, Qifan Wang and Xiangnan He
+    <br> ArXiv 2023.  &nbsp;&nbsp; <a href="https://arxiv.org/abs/2310.19488" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/CoLLM" target="_blank">Codes</a>
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Recommendation Unlearning via Influence Function</span>
+      <br><b>Yang Zhang</b>, Zhiyu Hu, Yimeng Bai, Fuli Feng, Jiancan Wu, Qifan Wang, Xiangnan He
+    <br> ArXiv 2023.  &nbsp;&nbsp; <a href="https://arxiv.org/abs/2307.02147" target="_blank">pdf&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+
+
+
+
+<h2>Publications</h2>
+</br>
+
+
+
+<b> In the Year of 2024: </b> </br></br>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://openreview.net/pdf?id=gH6rPJurgg" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Text-like Encoding of Collaborative Information in Large Language Models for Recommendation</span>
+      <br> <b>Yang Zhang</b>, Keqin Bao, Ming Yan, Wenjie Wang, Fuli Feng, Xiangnan He
+    <br>ACL 2024 (Main)  &nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://arxiv.org/abs/2405.01063v1" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Fair Recommendations with Limited Sensitive Attributes: A Distributionally Robust Optimization Approach</span>
+      <br> Tianhao Shi, <b>Yang Zhang*</b>, Jizhi Zhang, Fuli Feng* & Xiangnan He
+    <br>SIGIR 2024 (Full, AR: 20.1%)  &nbsp;&nbsp; *Corresponding
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://arxiv.org/abs/2205.07499" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Mitigating Hidden Confounding Effects for Causal Recommendation</span>
+      <br>Xinyuan Zhu, <b>Yang Zhang*</b>, Fuli Feng*, Xun Yang, Dingxian Wang, Xiangnan He
+    <br>TKDE 2024 (Regular)  &nbsp;&nbsp;  *Corresponding
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://arxiv.org/abs/2312.10947" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">LabelCraft: Empowering Short Video Recommendations with Automated Label Crafting</span>
+      <br> Yimeng Bai, <b>Yang Zhang*</b>, Jing Lu, Jianxin Chang, Xiaoxue Zang, Yanan Niu, Yang Song and Fuli Feng*
+    <br> WSDM 2024 (Poster, AR: 18%). &nbsp;&nbsp; <a href="https://github.com/baiyimeng/LabelCraft" target="_blank">Codes</a> *Corresponding
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://openreview.net/pdf?id=gH6rPJurgg" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">GradCraft: Elevating Multi-task Recommendations through Holistic Gradient Crafting</span>
+      <br>Yimeng Bai, <b>Yang Zhang</b>, Fuli Feng, Jing Lu, Xiaoxue Zang, Chenyi Lei, Yang Song
+    <br>KDD 2024 (ADS, AR: 20%)  &nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://arxiv.org/abs/2403.00843v2" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Large Language Models are Learnable Planners for Long-Term Recommendation</span>
+      <br> Wentao Shi, Xiangnan He, <b>Yang Zhang</b>, Chongming Gao, Xinyue Li, Jizhi Zhang, Qifan Wang & Fuli Feng
+    <br>SIGIR 2024 (Full, AR: 20.1%)  &nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://hexiangnan.github.io/papers/www24-LLPAUC.pdf" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Lower-Left Partial AUC: An Effective and Efficient Optimization Metric for Recommendation</span>
+      <br> Wentao Shi, Chenxu Wang, Fuli Feng, <b>Yang Zhang</b>, Wenjie Wang, Junkang Wu & Xiangnan He*
+    <br>WWW 2024 (Research, AR: 20.2%)  &nbsp;&nbsp; 
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="https://arxiv.org/abs/2405.01063v1" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Evaluating Mathematical Reasoning of Large Language Models: A Focus on Error Identification and Correction</span>
+      <br> Xiaoyuan Li, Wenjie Wang, Moxin Li, Junrong Guo, <b>Yang Zhang</b>, Fuli Feng
+    <br>ACL 2024 (Findings)  &nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<b> In the Year of 2023: </b> </br></br>
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Leveraging Watch-time Feedback for Short-Video Recommendations: A Causal Labeling Framework</span>
+      <br><b>Yang Zhang*</b>, Yimeng Bai*, Jianxin Chang*, Xiaoxue Zang, Song Lu, Jing Lu, Fuli Feng, Yanan Niu, Yang Song
+    <br> CIKM 2023 (Applied Research Paper, AR: 32%).  &nbsp;&nbsp; <a href="https://arxiv.org/abs/2306.17426" target="_blank">pdf&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Reformulating CTR Prediction: Learning Invariant Feature Interactions for Recommendation</span>
+        <br> <b>Yang Zhang*</b>, Tianhao Shi*, Fuli Feng, Wenjie Wang, Dingxian Wang, Xiangnan He and Yongdong Zhang 
+    <br> SIGIR 2023 (Full, AR: 20%) &nbsp;&nbsp; <a href="https://arxiv.org/abs/2304.13643" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/DIL" target="_blank">Codes</a>
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Addressing Confounding Feature Issue for Causal Recommendation</span>
+      <br>Xiangnan He, <b>Yang Zhang*</b>, Fuli Feng, Chonggang Song, Lingling Yi, Guohui Ling & Yongdong Zhang
+    <br> ACM TOIS 2023  &nbsp;&nbsp; <a href="https://arxiv.org/abs/2205.06532" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/DCR" target="_blank">Codes</a>&nbsp;&nbsp; *Corresponding
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title"> Prediction then Correction: An Abductive Prediction Correction Method for Sequential Recommendation</span>
+        <br> Yulong Huang*, <b>Yang Zhang*</b>, Qifan Wang, Chenxu Wang and Fuli Feng 
+    <br> SIGIR 2023 (short,  AR: 25%)  &nbsp;&nbsp; <a href="https://arxiv.org/pdf/2304.14050v1.pdf" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/APC" target="_blank">Codes</a>&nbsp;&nbsp; *Equal contribution
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title"> LightMIRM: Light Meta-learned Invariant Risk Minimization for Trustworthy Loan Default Prediction </span>
+        <br> Meng Jiang, <b>Yang Zhang</b>, Yuan Gao, Yansong Wang, Fuli Feng and Xiangnan He
+    <br> ICDE 2023 (Industry and Applications Track) &nbsp;&nbsp; <a href="https://arxiv.org/abs/xxxxx" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/xxx" target="_blank">Codes</a>
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Rethinking Missing Data: Aleatoric Uncertainty-Aware Recommendation</span>
+      <br> Chenxu Wang, Fuli Feng, <b>Yang Zhang</b>, Qifan Wang, Xunhan Hu, Xiangnan He
+    <br> IEEE TBD 2023; <a href="https://arxiv.org/abs/2209.11679" target="_blank">pdf&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation</span>
+      <br>Keqin Bao, Jizhi Zhang, <b>Yang Zhang</b>, Wenjie Wang, Fuli Feng, Xiangnan He
+    <br> RecSys 2023 (Short).  &nbsp;&nbsp; <a href="https://arxiv.org/abs/2305.00447" target="_blank">pdf&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Is ChatGPT Fair for Recommendation? Evaluating Fairness in Large Language Model Recommendation</span>
+      <br>Jizhi Zhang, Keqin Bao, <b>Yang Zhang</b>, Wenjie Wang, Fuli Feng, Xiangnan He
+    <br> RecSys 2023 (Short).  &nbsp;&nbsp; <a href="https://arxiv.org/abs/2305.07609" target="_blank">pdf&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title"> Mitigating Spurious Correlations for Self-supervised Recommendation </span>
+        <br> Xinyu Lin, Yiyan Xu, Wenjie Wang, <b> Yang Zhang </b> and Fuli Feng
+    <br> Machine Intelligence Research (2023) &nbsp;&nbsp; <a href="https://arxiv.org/abs/xxxxx" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/xxx" target="_blank">Codes</a>
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Towards Trustworthy Recommender System: A Faithful and Responsible Recommendation Perspective</span>
+      <br>  <b>Yang Zhang</b>
+    <br> SIGIR 2023 (Doctoral Consortium) &nbsp;&nbsp; <a href="https://xx" target="_blank">pdf&nbsp;&nbsp;
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+<b> Before 2022: </b> </br></br>
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">Causal Intervention for Leveraging Popularity Bias in Recommendation</span>
+      <br><b>Yang Zhang</b>, Fuli Feng, Xiangnan He, Tianxin Wei, Chonggang Song, Guohui Ling & Yongdong Zhang
+    <br>SIGIR 2021 (Full, AR: 21%) &nbsp;&nbsp; <a href="https://arxiv.org/abs/2105.06067v1" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/PDA" target="_blank">Codes</a>; <b><font color="red">Best Paper Honorable Mention</font></b>
+  </td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table>
+  <tbody>
+  <tr>
+    <td class="left"><a href="tocome" target="_blank"><img src="./Homepage_files/pdf.gif"><br>pdf</a></td>
+    <td><span class="title">How to Retrain Recommender System? A Sequential Meta-Learning Approach</span> 
+      <br><b>Yang Zhang</b>, Fuli Feng, Chenxu Wang, Xiangnan He, Meng Wang, Yan Li &amp; Yongdong Zhang
+    <br>SIGIR 2020 (Full, AR: 26%) &nbsp;&nbsp; <a href="http://staff.ustc.edu.cn/~hexn/papers/sigir20-SML.pdf" target="_blank">pdf&nbsp;&nbsp;<a href="https://github.com/zyang1580/SML" target="_blank">Codes</a>
+  </td> 
+  </tr>
+ </tbody>
+</table>
+
+
+
+
+
+
+<h2 style="CLEAR: both;">Services & Awards & Patents</h2>
+<table><tbody><tr><td>
+<!-- 	Local Chair of <span class="title">CCIS 2019</span> (IEEE International Conference on Cloud Computing and Intelligence Systems) <br> -->
+    Invited Reviewer for <span class="title">ACM TOIS, IEEE TKDE, IEEE TNNLS, ACM TIST and ACM TKDD </span> <br>
+</td></tr></tbody></table>
+
+
+<table><tbody><tr><td>
+    Program committee member of <span class="title"> WWW 2024, SIGIR (2024,2023), KDD (2024,2023), RecSys (2024,2023), WSDM (2024,2023), CIKM 2024, AAAI (2024,2023), SIGIR-AP (2023), ECML/PKDD 2022 </span> <br>
+</td></tr></tbody></table>
+
+<table><tbody><tr><td>
+  <span class="title">RecSys 2023 Outstanding Reviewer Award, &nbsp;2023 </span> &nbsp;&nbsp;
+  <br> - ACM RecSys
+</td></tr></tbody></table>
+
+<table><tbody><tr><td>
+  <span class="title"> National Scholarship, &nbsp;2021 </span> &nbsp;&nbsp;
+  <br> - USTC, China
+</td></tr></tbody></table>
+
+<table><tbody><tr><td>
+  <span class="title">SIGIR Best Paper Honorable Mention, &nbsp;2021 </span> &nbsp;&nbsp;
+  <br> - ACM SIGIR
+</td></tr></tbody></table>
+
+<table><tbody><tr><td>
+  <span class="title">National Scholarship, &nbsp;2018 </span> &nbsp;&nbsp;
+  <br> - USTC, China
+</td></tr></tbody></table>
+
+<table><tbody><tr><td>
+  <span class="title">National Encouragement Scholarship, 2017 </span> &nbsp;&nbsp;
+  <br> - USTC, China
+</td></tr></tbody></table>
+
+<table><tbody><tr><td>
+  <span class="title">Outstanding Student Scholarship, 2016&2017 </span> &nbsp;&nbsp;
+  <br> - USTC, China
+</td></tr></tbody></table>
+
+
+<!--<table>
+  <tbody>
+  <tr>
+    <td><span class="title"><a href="https://www.accenture.com" target="_blank">Accenture Inc.</a></span> <br>
+    IT Consult Intern, Media Markt project. <br>
+    Shanghai, China &nbsp;&nbsp; Jan. 2011 - Apr. 2011</td></tr></tbody></table>
+-->
+
+<!-- =======================================================================!-->
+
+<!-- <h2 style="CLEAR: both;">Datasets</h2>
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title"><a href="http://wing.comp.nus.edu.sg/downloads/multiview_clustering/" target="_blank">Multi-View Clustering with User Comments</a></span> <br>
+	  The first public user comments dataset for multi-view clustering. The groundtruth labels are provided as the categories of items. The textual comments have been pre-processed, include stemming, removing stopwords .etc.<br>
+	  <a href="http://dl.acm.org/citation.cfm?id=2567975">WWW 2014 paper</a>.</td></tr></tbody></table> -->
+
+<!--
+<h2 style="CLEAR: both;">Teaching Assistants</h2>
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title"><a href="http://www1.i2r.a-star.edu.sg/~jspan/courses/nus/CS5228.htm" target="_blank">CS5228 Knowledge Discovery and Data Mining</a></span> <br>
+	2014/2015 Semester 1 
+     </td></tr></tbody></table>
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title"><a href="http://www.comp.nus.edu.sg/~kanmy/courses/3245_2014/" target="_blank">CS3245 Information Retrieval</a></span> <br>
+	2013/2014 Semester 2 
+     </td></tr></tbody></table>
+<table>
+  <tbody>
+  <tr>
+    <td><span class="title"><a href="http://www.comp.nus.edu.sg/~xiangnan/cs1020_tutorial2.htm" target="_blank">CS3245 CS1020 Data Structure and Algorithms</a></span> <br>
+	2013/2014 Semester 1
+     </td></tr></tbody></table>
+-->
+		
+<h2 style="CLEAR: both;">Useful Links</h2>
+<table><tbody>
+<tr><td> <span class=>
+<!--  <tr><td> <span class="title"><a href="http://staff.ustc.edu.cn/~hexn/SoC%20Conference%20Ranking.htm" target="_blank">NUS CS Conference Rankings</a></span> </td></tr>-->
+  <tr><td> <span class="title"><a href="http://staff.ustc.edu.cn/~hexn" target="_blank">Prof. Xiangnan He</a></span> </td></tr>
+  <tr><td> <span class="title"><a href="https://github.com/zyang1580/Causal_Reading_Group" target="_blank">Causality Reading List</a></span> </td></tr>
+  <!-- <tr><td> <span class="title"><a href="https://causalrec.github.io" target="_blank">Causal Recommendation Tutorial</a></span> </td></tr> -->
+<!--  <tr><td> <span class="title"><a href="http://staff.ustc.edu.cn/~hexn/SoC%20Journal%20Ranking.htm" target="_blank">NUS CS Journal Ranking</a></span> </td></tr>  -->
+<!--  <tr><td> <span class="title"><a href="http://www.comp.nus.edu.sg/undergraduates/useful_course_schedule.html" target="_blank">NUS CS Courses</a></span> </td></tr>    -->
+<!--  <tr><td> <span class="title"><a href="https://docs.google.com/document/d/1IXF3h0RU5zz4ukmTrVKVotPQypChscNGf5k6E25HGvA" target="_blank">Machine Learning Reading List</a></span> </td></tr>    -->
+<!--  <tr><td> <span class="title"><a href="https://github.com/robertsdionne/neural-network-papers" target="_blank">Deep Learning Reading List</a></span> </td></tr>    -->
+</tbody></table>
+
+<br>
+<!--<div id="clustrmaps-widget"></div> </a><a href="https://clustrmaps.com/site/1ar45" title="Visit tracker"><img src="./Xiangnan He&#39;s Homepage_files/map_v2.png"></a>-->
+<IMG SRC="/cgi-bin/Count.cgi?df=zy2015.dat&dd=cdr&md=7" />
+  
+<p>Last update: May 19, 2024. Webpage template borrows from prof. <a href="http://staff.ustc.edu.cn/~hexn">Xiangnan He</a>.</p>
+
+</div>
+</div>
+
+
+
+</div></body></html>
